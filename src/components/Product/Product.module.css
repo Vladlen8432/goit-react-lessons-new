@@ -1,0 +1,32 @@
+.product {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 370px;
+}
+
+.productImg {
+  border-radius: 15px;
+  max-width: 350px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+
+.discountBage {
+  padding: 8px;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+
+.productAddToCardBtn {
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Some changes */
