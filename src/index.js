@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { App } from 'components/App';
+import { App } from 'components/App';
+// import AppWithRequest from 'components/AppWithRequest';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
-import AppWithRequest from 'components/AppWithRequest';
 
-ReactDOM.createRoot(document.getElementById('root')).render(<AppWithRequest />);
+// ReactDOM.createRoot(document.getElementById('root')).render(<AppWithRequest />);
 
-// ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+/* _____________________________________________________ */
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -15,4 +17,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<AppWithRequest />);
 //   </React.StrictMode>
 // );
 
-/* module3-lesson2-01:38:00 */
+/* module4-lesson2 - start */
