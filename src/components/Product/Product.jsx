@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import css from './Product.module.css';
+import { ModalContext } from 'context/ModalContext';
 
 export const Product = ({
   title,
@@ -7,8 +9,10 @@ export const Product = ({
   discount,
   handleDeleteProduct,
   id,
-  openModal,
 }) => {
+  const { dayOfTheMonth, openModal } = useContext(ModalContext);
+  console.log('dayOfTheMonth', dayOfTheMonth);
+
   const productBg = discount ? '#00b300' : '#d9d9d9';
 
   const productStyles = {
@@ -17,6 +21,7 @@ export const Product = ({
 
   return (
     <div className={css.product} style={productStyles}>
+      <h4>Day of the month: {dayOfTheMonth}</h4>
       <img
         className={css.productImg}
         src={imageURL}

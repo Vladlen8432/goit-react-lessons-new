@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 
 import { Product } from './Product/Product';
@@ -7,6 +7,7 @@ import Section from './Section/Section';
 import ProductForm from './ProductForm/ProductForm';
 import css from './App.module.css';
 import Modal from './Modal/Modal';
+import { ModalContext } from 'context/ModalContext';
 
 export const App = () => {
   const [products, setProducts] = useState(() => {
@@ -15,8 +16,8 @@ export const App = () => {
 
     return parsedProducts;
   });
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [modalData, setModalData] = useState(null);
+
+  const { isOpenModal } = useContext(ModalContext);
 
   useEffect(() => {
     const stringifiedProducts = JSON.stringify(products);
@@ -45,16 +46,6 @@ export const App = () => {
     setProducts([...products, finalProduct]);
   };
 
-  const openModal = someDataToModal => {
-    setIsOpenModal(true);
-    setModalData(someDataToModal);
-  };
-
-  const closeModal = () => {
-    setIsOpenModal(false);
-    setModalData(null);
-  };
-
   const sortedProducts = [...products].sort((a, b) => b.discount - a.discount);
 
   return (
@@ -79,14 +70,13 @@ export const App = () => {
                 discount={product.discount}
                 imageURL={product.imageURL}
                 handleDeleteProduct={handleDeleteProduct}
-                openModal={openModal}
               />
             );
           })}
         </div>
       </Section>
 
-      {isOpenModal && <Modal closeModal={closeModal} modalData={modalData} />}
+      {isOpenModal && <Modal />}
     </div>
   );
 };
