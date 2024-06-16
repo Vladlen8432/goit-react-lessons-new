@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import Loader from './Loader/Loader';
-import css from './AppWithRequest.module.css';
+import Loader from 'components/Loader/Loader';
+import css from './PostsPage.module.css';
 
-export default class AppWithRequest extends Component {
+export default class PostsPage extends Component {
   state = {
     posts: null,
     comments: null,
@@ -71,14 +72,16 @@ export default class AppWithRequest extends Component {
               this.state.posts.map(post => (
                 <li
                   key={post.id}
-                  onClick={() => this.onSelectPostId(post.id)}
+                  // onClick={() => this.onSelectPostId(post.id)}
                   className={css.postListItem}
                 >
-                  <h2 className={css.itemTitle}>{post.title}</h2>
-                  <p className={css.itemBody}>
-                    <b>Body: </b>
-                    {post.body}
-                  </p>
+                  <Link to={`/posts/${post.id}`}>
+                    <h2 className={css.itemTitle}>{post.title}</h2>
+                    <p className={css.itemBody}>
+                      <b>Body: </b>
+                      {post.body}
+                    </p>
+                  </Link>
                 </li>
               ))}
           </ul>

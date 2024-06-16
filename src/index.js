@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
-// import AppWithRequest from 'components/AppWithRequest';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 import { ModalContextProvider } from 'context/ModalContext';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ModalContextProvider>
-    {/* <AppWithRequest /> */}
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ModalContextProvider>
 );
 
-/* module04-lesson02 - 01:16:00 */
+/* module05-lesson01 - 00:41:00 */
