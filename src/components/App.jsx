@@ -2,31 +2,20 @@ import HomePage from 'pages/HomePage';
 import PostDetails from 'pages/PostDetails';
 import PostsPage from 'pages/PostsPage';
 import { ProductsPage } from 'pages/ProductsPage';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import Layout from './Layout/Layout';
 
 export const App = () => {
   return (
-    <div>
-      <header>
-        <NavLink className="header-link" to="/">
-          Home
-        </NavLink>
-        <NavLink className="header-link" to="/posts">
-          Posts
-        </NavLink>
-        <NavLink className="header-link" to="/products">
-          Products
-        </NavLink>
-      </header>
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/posts" element={<PostsPage />} />
-          <Route path="/posts/:postId/*" element={<PostDetails />} />
-          <Route path="/products" element={<ProductsPage />} />
-        </Routes>
-      </main>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/posts" element={<PostsPage />} />
+        <Route path="/posts/:postId/*" element={<PostDetails />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Layout>
   );
 };
 
