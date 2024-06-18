@@ -1,13 +1,29 @@
 {
   "files": {
-    "main.css": "/goit-react-lessons-new/static/css/main.e6eca8e9.css",
-    "main.js": "/goit-react-lessons-new/static/js/main.a859da7a.js",
+    "main.css": "/goit-react-lessons-new/static/css/main.73fdc25c.css",
+    "main.js": "/goit-react-lessons-new/static/js/main.5683191e.js",
+    "static/css/670.4a298d92.chunk.css": "/goit-react-lessons-new/static/css/670.4a298d92.chunk.css",
+    "static/js/670.fc49360d.chunk.js": "/goit-react-lessons-new/static/js/670.fc49360d.chunk.js",
+    "static/js/27.0a570ede.chunk.js": "/goit-react-lessons-new/static/js/27.0a570ede.chunk.js",
+    "static/js/953.dc9ed1fa.chunk.js": "/goit-react-lessons-new/static/js/953.dc9ed1fa.chunk.js",
+    "static/css/869.c0206423.chunk.css": "/goit-react-lessons-new/static/css/869.c0206423.chunk.css",
+    "static/js/869.af19383f.chunk.js": "/goit-react-lessons-new/static/js/869.af19383f.chunk.js",
+    "static/js/787.d2ab0c85.chunk.js": "/goit-react-lessons-new/static/js/787.d2ab0c85.chunk.js",
+    "static/js/16.ebd6142f.chunk.js": "/goit-react-lessons-new/static/js/16.ebd6142f.chunk.js",
     "index.html": "/goit-react-lessons-new/index.html",
-    "main.e6eca8e9.css.map": "/goit-react-lessons-new/static/css/main.e6eca8e9.css.map",
-    "main.a859da7a.js.map": "/goit-react-lessons-new/static/js/main.a859da7a.js.map"
+    "main.73fdc25c.css.map": "/goit-react-lessons-new/static/css/main.73fdc25c.css.map",
+    "main.5683191e.js.map": "/goit-react-lessons-new/static/js/main.5683191e.js.map",
+    "670.4a298d92.chunk.css.map": "/goit-react-lessons-new/static/css/670.4a298d92.chunk.css.map",
+    "670.fc49360d.chunk.js.map": "/goit-react-lessons-new/static/js/670.fc49360d.chunk.js.map",
+    "27.0a570ede.chunk.js.map": "/goit-react-lessons-new/static/js/27.0a570ede.chunk.js.map",
+    "953.dc9ed1fa.chunk.js.map": "/goit-react-lessons-new/static/js/953.dc9ed1fa.chunk.js.map",
+    "869.c0206423.chunk.css.map": "/goit-react-lessons-new/static/css/869.c0206423.chunk.css.map",
+    "869.af19383f.chunk.js.map": "/goit-react-lessons-new/static/js/869.af19383f.chunk.js.map",
+    "787.d2ab0c85.chunk.js.map": "/goit-react-lessons-new/static/js/787.d2ab0c85.chunk.js.map",
+    "16.ebd6142f.chunk.js.map": "/goit-react-lessons-new/static/js/16.ebd6142f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6eca8e9.css",
-    "static/js/main.a859da7a.js"
+    "static/css/main.73fdc25c.css",
+    "static/js/main.5683191e.js"
   ]
 }
