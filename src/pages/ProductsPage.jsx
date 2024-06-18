@@ -9,7 +9,7 @@ import Modal from '../components/Modal/Modal';
 import { ModalContext } from 'context/ModalContext';
 import css from '../components/App.module.css';
 
-export const ProductsPage = () => {
+const ProductsPage = () => {
   const [products, setProducts] = useState(() => {
     const stringifiedProducts = localStorage.getItem('product');
     const parsedProducts = JSON.parse(stringifiedProducts) ?? productData;
@@ -80,3 +80,5 @@ export const ProductsPage = () => {
     </div>
   );
 };
+
+export default ProductsPage;
