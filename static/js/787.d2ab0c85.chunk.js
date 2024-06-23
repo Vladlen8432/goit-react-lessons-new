@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgoit_react_lessons_new=self.webpackChunkgoit_react_lessons_new||[]).push([[787],{787:function(s,e,n){n.r(e);n(791);var t=n(689),o=n(184);e.default=function(){var s=(0,t.UO)().postId;return(0,o.jsxs)("div",{children:["PostComments: ",s]})}}}]);
-//# sourceMappingURL=787.d2ab0c85.chunk.js.map
