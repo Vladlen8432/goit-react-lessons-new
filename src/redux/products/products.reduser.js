@@ -25,3 +25,17 @@ export const productsReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export const deleteProduct = (payload) => {
+  return {
+    type: 'products/deleteProducts',
+    payload,
+  }
+}
+
+export const addProduct = (payload) => {
+  return {
+    type: 'products/addProducts',
+    payload,
+  }
+}

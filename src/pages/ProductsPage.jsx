@@ -10,6 +10,7 @@ import ProductForm from '../components/ProductForm/ProductForm';
 import Modal from '../components/Modal/Modal';
 import { ModalContext } from 'context/ModalContext';
 import css from '../components/App.module.css';
+import { deleteProduct, addProduct } from '../redux/products/products.reduser';
 
 const ProductsPage = () => {
   const dispatch = useDispatch();
@@ -30,11 +31,11 @@ const ProductsPage = () => {
   // }, [products]);
 
   const handleDeleteProduct = productId => {
-    const deleteProductAction = {
-      type: 'products/deleteProducts',
-      payload: productId,
-    };
-    dispatch(deleteProductAction);
+    dispatch(deleteProduct(productId))
+    // const deleteProductAction = {
+    //   type: 'products/deleteProducts',
+    //   payload: productId,
+    // };
     // setProducts(products.filter(product => product.id !== productId));
   };
 
@@ -53,11 +54,11 @@ const ProductsPage = () => {
       id: nanoid(),
     };
 
-    const addProductAction = {
-      type: 'products/addProducts',
-      payload: finalProduct,
-    };
-    dispatch(addProductAction);
+    // const addProductAction = {
+    //   type: 'products/addProducts',
+    //   payload: finalProduct,
+    // };
+    dispatch(addProduct(finalProduct));
     // setProducts([...products, finalProduct]);
   };
 
