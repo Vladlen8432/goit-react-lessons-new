@@ -1,19 +1,17 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyledModal } from './Styled';
-import { ModalContext } from 'context/ModalContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeModal } from '../../redux/modal/modal.reducer';
 
 const Modal = () => {
-  const { modalData, closeModal } = useContext(ModalContext);
+  const modalData = useSelector(state => state.modal.modalData);
+  const dispatch = useDispatch();
   const [counter, setCounter] = useState(1);
-  const inputRef = useRef();
-  const firstRenderRef = useRef(true);
-
-  console.log('inputRef:', inputRef.current);
 
   useEffect(() => {
     const handleKeyDown = event => {
       if (event.code === 'Escape') {
-        closeModal();
+        dispatch(closeModal());
       }
     };
 
@@ -24,41 +22,18 @@ const Modal = () => {
       window.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'auto';
     };
-  }, [closeModal]);
+  }, [dispatch]);
 
   const handleOverlayClick = event => {
     if (event.target === event.currentTarget) {
-      closeModal();
+      dispatch(closeModal());
     }
   };
-
-  useEffect(() => {
-    if (!inputRef.current) return;
-
-    inputRef.current.focus();
-  });
-
-  const hanleButtonClick = () => {
-    console.log('inputRef:', inputRef.current);
-    // const inputWidth = getComputedStyle(inputRef.current).width;
-    // console.log('inputWidth:', inputWidth);
-    inputRef.current.focus();
-  };
-
-  useEffect(() => {
-    if (firstRenderRef.current === false) {
-      console.log('counter changed', counter);
-    }
-
-    return () => {
-      firstRenderRef.current = false;
-    };
-  }, [counter]);
 
   return (
     <StyledModal onClick={handleOverlayClick}>
       <div className="modal">
-        <button onClick={closeModal} className="closeBtn">
+        <button onClick={() => dispatch(closeModal())} className="closeBtn">
           &times;
         </button>
         <h2>Product details</h2>
@@ -67,8 +42,6 @@ const Modal = () => {
           <p>Price: {modalData.price}$</p>
           <p>Discount: {modalData.discount}$</p>
         </div>
-        <input ref={inputRef} type="text" />
-        <button onClick={hanleButtonClick}>Select input</button>
         <br />
         <button onClick={() => setCounter(prev => prev + 1)}>
           Product count: {counter}

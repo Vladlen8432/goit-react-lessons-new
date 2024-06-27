@@ -1,6 +1,6 @@
-import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
 import css from './Product.module.css';
-import { ModalContext } from 'context/ModalContext';
+import { openModal } from '../../redux/modal/modal.reducer';
 
 export const Product = ({
   title,
@@ -10,8 +10,7 @@ export const Product = ({
   handleDeleteProduct,
   id,
 }) => {
-  const { dayOfTheMonth, openModal } = useContext(ModalContext);
-  console.log('dayOfTheMonth', dayOfTheMonth);
+  const dispatch = useDispatch();
 
   const productBg = discount ? '#00b300' : '#d9d9d9';
 
@@ -21,7 +20,6 @@ export const Product = ({
 
   return (
     <div className={css.product} style={productStyles}>
-      <h4>Day of the month: {dayOfTheMonth}</h4>
       <img
         className={css.productImg}
         src={imageURL}
@@ -36,7 +34,7 @@ export const Product = ({
       </button>
 
       <button
-        onClick={() => openModal({ title, price, discount })}
+        onClick={() => dispatch(openModal({ title, price, discount }))}
         className={css.productAddToCardBtn}
         type="button"
       >

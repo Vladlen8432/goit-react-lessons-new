@@ -1,42 +1,21 @@
-import { useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useContext, useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 
 import { Product } from '../components/Product/Product';
-// import { productData } from '../components/Product/ProductData';
 import Section from '../components/Section/Section';
 import ProductForm from '../components/ProductForm/ProductForm';
 import Modal from '../components/Modal/Modal';
-import { ModalContext } from 'context/ModalContext';
-import css from '../components/App.module.css';
 import { deleteProduct, addProduct } from '../redux/products/products.reduser';
+import css from '../components/App.module.css';
 
 const ProductsPage = () => {
   const dispatch = useDispatch();
-  const { isOpenModal } = useContext(ModalContext);
+
+  const isOpenModal = useSelector(state => state.modal.isOpenModal);
   const products = useSelector(state => state.productsStore.products);
-  console.log('products:', products);
-
-  // const [products, setProducts] = useState(() => {
-  //   const stringifiedProducts = localStorage.getItem('product');
-  //   const parsedProducts = JSON.parse(stringifiedProducts) ?? productData;
-
-  //   return parsedProducts;
-  // });
-
-  // useEffect(() => {
-  //   const stringifiedProducts = JSON.stringify(products);
-  //   localStorage.setItem('products', stringifiedProducts);
-  // }, [products]);
 
   const handleDeleteProduct = productId => {
-    dispatch(deleteProduct(productId))
-    // const deleteProductAction = {
-    //   type: 'products/deleteProducts',
-    //   payload: productId,
-    // };
-    // setProducts(products.filter(product => product.id !== productId));
+    dispatch(deleteProduct(productId));
   };
 
   const handleAddProduct = productData => {
@@ -54,12 +33,7 @@ const ProductsPage = () => {
       id: nanoid(),
     };
 
-    // const addProductAction = {
-    //   type: 'products/addProducts',
-    //   payload: finalProduct,
-    // };
     dispatch(addProduct(finalProduct));
-    // setProducts([...products, finalProduct]);
   };
 
   const sortedProducts = [...products].sort((a, b) => b.discount - a.discount);

@@ -6,16 +6,19 @@ import './index.css';
 import { ModalContextProvider } from 'context/ModalContext';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { persistor, store } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ModalContextProvider>
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <PersistGate persistor={persistor}>
+          <App />
+        </PersistGate>
       </Provider>
     </BrowserRouter>
   </ModalContextProvider>
 );
 
-/* module06-lesson02 - 00:23:00 */
+/* module07-lesson01 - start */
