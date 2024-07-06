@@ -1,41 +1,28 @@
-import axios from 'axios';
 import { Suspense, lazy } from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Route, useLocation, useParams } from 'react-router-dom';
 import { NavLink, Routes, Link } from 'react-router-dom';
 
 import Loader from 'components/Loader/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPostDetails } from '../redux/postDetails/postDetails.reducer';
+import { selectPostDetails, selectPostDetailsError, selectPostDetailsIsLoading } from '../redux/postDetails/postDetails.selectors';
 
 const PostComments = lazy(() => import('pages/PostComments'));
 
 const PostDetails = () => {
   const { postId } = useParams();
   const location = useLocation();
-  console.log('location: ', location);
-
+  const dispatch = useDispatch();
   const backLinkRef = useRef(location.state?.from ?? '/');
 
-  const [postDetails, setPostDetails] = useState(null);
-  const [isLoading, setisLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const postDetails = useSelector(selectPostDetails);
+  const isLoading = useSelector(selectPostDetailsIsLoading);
+  const error = useSelector(selectPostDetailsError);
 
   useEffect(() => {
-    const fetchPostDetails = async () => {
-      try {
-        setisLoading(true);
-        const { data } = await axios.get(
-          `https://jsonplaceholder.typicode.com/posts/${postId}`
-        );
-        setPostDetails(data);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setisLoading(false);
-      }
-    };
-
-    fetchPostDetails();
-  }, [postId]);
+    dispatch(fetchPostDetails(postId));
+  }, [postId, dispatch]);
 
   return (
     <div>

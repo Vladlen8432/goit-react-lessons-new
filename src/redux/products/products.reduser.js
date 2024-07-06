@@ -4,12 +4,16 @@ const initialState = {
   products: [],
   isLoading: false,
   error: null,
+  filterTerm: '',
 };
 
 const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
+    setFilterTerm(state, { payload }) {
+      state.filterTerm = payload;
+    },
     addProduct(state, { payload }) {
       state.products.push(payload);
     },
@@ -19,5 +23,6 @@ const productsSlice = createSlice({
   },
 });
 
-export const { deleteProduct, addProduct } = productsSlice.actions;
+export const { deleteProduct, addProduct, setFilterTerm } =
+  productsSlice.actions;
 export const productsReducer = productsSlice.reducer;

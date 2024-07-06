@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { StyledModal } from './Styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../redux/modal/modal.reducer';
+import { selectModalData } from '../../redux/modal/modal.selectors';
 
 const Modal = () => {
-  const modalData = useSelector(state => state.modal.modalData);
+  const modalData = useSelector(selectModalData);
   const dispatch = useDispatch();
   const [counter, setCounter] = useState(1);
 

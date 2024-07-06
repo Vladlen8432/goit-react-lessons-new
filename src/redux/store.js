@@ -9,9 +9,12 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 import { productsReducer } from './products/products.reduser';
 import { modalReducer } from './modal/modal.reducer';
-import storage from 'redux-persist/lib/storage';
+import { postDetailsReducer } from './postDetails/postDetails.reducer';
+import { authReducer } from './auth/auth.reducer';
 
 const productsConfig = {
   key: 'products',
@@ -19,15 +22,18 @@ const productsConfig = {
   whitelist: ['products'],
 };
 
-const modalConfig = {
-  key: 'modal',
+const authConfig = {
+  key: 'auth',
   storage,
+  whitelist: ['token'],
 };
 
 export const store = configureStore({
   reducer: {
     productsStore: persistReducer(productsConfig, productsReducer),
-    modal: persistReducer(modalConfig, modalReducer),
+    modal: modalReducer,
+    magazine: postDetailsReducer,
+    auth: persistReducer(authConfig, authReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
