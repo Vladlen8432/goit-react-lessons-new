@@ -1,29 +1,33 @@
 {
   "files": {
     "main.css": "/goit-react-lessons-new/static/css/main.73fdc25c.css",
-    "main.js": "/goit-react-lessons-new/static/js/main.50877405.js",
+    "main.js": "/goit-react-lessons-new/static/js/main.fe546910.js",
     "static/css/670.4a298d92.chunk.css": "/goit-react-lessons-new/static/css/670.4a298d92.chunk.css",
     "static/js/670.2d0d8196.chunk.js": "/goit-react-lessons-new/static/js/670.2d0d8196.chunk.js",
-    "static/js/27.5a1f372c.chunk.js": "/goit-react-lessons-new/static/js/27.5a1f372c.chunk.js",
+    "static/js/358.3b8c8a2d.chunk.js": "/goit-react-lessons-new/static/js/358.3b8c8a2d.chunk.js",
     "static/js/953.8032e79f.chunk.js": "/goit-react-lessons-new/static/js/953.8032e79f.chunk.js",
-    "static/css/607.32d6a127.chunk.css": "/goit-react-lessons-new/static/css/607.32d6a127.chunk.css",
-    "static/js/607.3fd94c7e.chunk.js": "/goit-react-lessons-new/static/js/607.3fd94c7e.chunk.js",
+    "static/css/619.5be0726e.chunk.css": "/goit-react-lessons-new/static/css/619.5be0726e.chunk.css",
+    "static/js/619.bdada481.chunk.js": "/goit-react-lessons-new/static/js/619.bdada481.chunk.js",
+    "static/js/637.c5a0383c.chunk.js": "/goit-react-lessons-new/static/js/637.c5a0383c.chunk.js",
+    "static/js/136.e9c25cc4.chunk.js": "/goit-react-lessons-new/static/js/136.e9c25cc4.chunk.js",
+    "static/js/360.816655ec.chunk.js": "/goit-react-lessons-new/static/js/360.816655ec.chunk.js",
     "static/js/787.7c04a446.chunk.js": "/goit-react-lessons-new/static/js/787.7c04a446.chunk.js",
-    "static/js/8.4d75d782.chunk.js": "/goit-react-lessons-new/static/js/8.4d75d782.chunk.js",
     "index.html": "/goit-react-lessons-new/index.html",
     "main.73fdc25c.css.map": "/goit-react-lessons-new/static/css/main.73fdc25c.css.map",
-    "main.50877405.js.map": "/goit-react-lessons-new/static/js/main.50877405.js.map",
+    "main.fe546910.js.map": "/goit-react-lessons-new/static/js/main.fe546910.js.map",
     "670.4a298d92.chunk.css.map": "/goit-react-lessons-new/static/css/670.4a298d92.chunk.css.map",
     "670.2d0d8196.chunk.js.map": "/goit-react-lessons-new/static/js/670.2d0d8196.chunk.js.map",
-    "27.5a1f372c.chunk.js.map": "/goit-react-lessons-new/static/js/27.5a1f372c.chunk.js.map",
+    "358.3b8c8a2d.chunk.js.map": "/goit-react-lessons-new/static/js/358.3b8c8a2d.chunk.js.map",
     "953.8032e79f.chunk.js.map": "/goit-react-lessons-new/static/js/953.8032e79f.chunk.js.map",
-    "607.32d6a127.chunk.css.map": "/goit-react-lessons-new/static/css/607.32d6a127.chunk.css.map",
-    "607.3fd94c7e.chunk.js.map": "/goit-react-lessons-new/static/js/607.3fd94c7e.chunk.js.map",
-    "787.7c04a446.chunk.js.map": "/goit-react-lessons-new/static/js/787.7c04a446.chunk.js.map",
-    "8.4d75d782.chunk.js.map": "/goit-react-lessons-new/static/js/8.4d75d782.chunk.js.map"
+    "619.5be0726e.chunk.css.map": "/goit-react-lessons-new/static/css/619.5be0726e.chunk.css.map",
+    "619.bdada481.chunk.js.map": "/goit-react-lessons-new/static/js/619.bdada481.chunk.js.map",
+    "637.c5a0383c.chunk.js.map": "/goit-react-lessons-new/static/js/637.c5a0383c.chunk.js.map",
+    "136.e9c25cc4.chunk.js.map": "/goit-react-lessons-new/static/js/136.e9c25cc4.chunk.js.map",
+    "360.816655ec.chunk.js.map": "/goit-react-lessons-new/static/js/360.816655ec.chunk.js.map",
+    "787.7c04a446.chunk.js.map": "/goit-react-lessons-new/static/js/787.7c04a446.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73fdc25c.css",
-    "static/js/main.50877405.js"
+    "static/js/main.fe546910.js"
   ]
 }
