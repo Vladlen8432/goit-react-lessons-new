@@ -1,4 +1,9 @@
+import { useDispatch } from 'react-redux';
+import { registerThunk } from '../redux/auth/auth.reducer';
+
 const RegisterPage = () => {
+  const dispatch = useDispatch();
+
   const onSubmit = e => {
     e.preventDefault();
 
@@ -6,15 +11,18 @@ const RegisterPage = () => {
     const email = e.currentTarget.elements.userEmail.value;
     const password = e.currentTarget.elements.userPassword.value;
 
-    console.log(name);
-    console.log(email);
-    console.log(password);
+    const formData = {
+      name,
+      email,
+      password,
+    };
+    dispatch(registerThunk(formData));
   };
 
   return (
     <form onSubmit={onSubmit}>
       <label>
-        <p>Email:</p>
+        <p>Name:</p>
         <input type="text" placeholder="John Doe" required name="userName" />
       </label>
 

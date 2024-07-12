@@ -6,7 +6,11 @@ import { NavLink, Routes, Link } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostDetails } from '../redux/postDetails/postDetails.reducer';
-import { selectPostDetails, selectPostDetailsError, selectPostDetailsIsLoading } from '../redux/postDetails/postDetails.selectors';
+import {
+  selectPostDetails,
+  selectPostDetailsError,
+  selectPostDetailsIsLoading,
+} from '../redux/postDetails/postDetails.selectors';
 
 const PostComments = lazy(() => import('pages/PostComments'));
 
